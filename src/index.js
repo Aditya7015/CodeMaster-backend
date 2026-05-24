@@ -18,7 +18,7 @@ const videoRouter = require("./routes/videoInsertion");
 const contestRouter = require("./routes/contestCreation");
 
 app.use(cors({
-    origin: ['http://localhost:5173',"https://codemaster-peach.vercel.app"],
+    origin: ['http://localhost:5173',"https://codemaster-peach.vercel.app", "https://code-master-opal.vercel.app/"],
     credentials: true 
 }))
 
@@ -40,7 +40,8 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://codemaster-peach.vercel.app"
+      "https://codemaster-peach.vercel.app",
+      "https://code-master-opal.vercel.app/"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
